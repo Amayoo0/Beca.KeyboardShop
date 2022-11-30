@@ -1,0 +1,69 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="client\bootstrap\**" />
+    <Compile Remove="client\src\app\cart\**" />
+    <Compile Remove="client\src\assets\NewFolder\**" />
+    <Compile Remove="Views\Account\**" />
+    <Content Remove="client\bootstrap\**" />
+    <Content Remove="client\src\app\cart\**" />
+    <Content Remove="client\src\assets\NewFolder\**" />
+    <Content Remove="Views\Account\**" />
+    <EmbeddedResource Remove="client\bootstrap\**" />
+    <EmbeddedResource Remove="client\src\app\cart\**" />
+    <EmbeddedResource Remove="client\src\assets\NewFolder\**" />
+    <EmbeddedResource Remove="Views\Account\**" />
+    <None Remove="client\bootstrap\**" />
+    <None Remove="client\src\app\cart\**" />
+    <None Remove="client\src\assets\NewFolder\**" />
+    <None Remove="Views\Account\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\OrderController.cs" />
+    <Compile Remove="Entities\Cart_Keyboards.cs" />
+    <Compile Remove="Entities\Order.cs" />
+    <Compile Remove="Entities\Repositories\CategoryRepository.cs" />
+    <Compile Remove="Entities\StoreUser.cs" />
+    <Compile Remove="Models\CartKeyboardDto.cs" />
+    <Compile Remove="Models\CartKeyboardForCreationDto.cs" />
+    <Compile Remove="Models\OrderDto.cs" />
+    <Compile Remove="Models\OrderForCreationDto.cs" />
+    <Compile Remove="Profiles\CartKeyboardProfile.cs" />
+    <Compile Remove="Profiles\OrderProfile.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="client\src\app\app.server.module.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.11" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.11" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Contracts" Version="5.0.2" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.10" />
+    <PackageReference Include="Serilog.AspNetCore" Version="6.0.1" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="4.1.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.25.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
+</Project>
